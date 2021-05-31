@@ -26,7 +26,7 @@ wasm-bindgen "target/wasm32-unknown-unknown/${BUILD}/${TARGET_NAME}" \
 
 # to get wasm-opt:  apt/brew/dnf install binaryen
 # echo "Optimizing wasm…"
-# wasm-opt docs/${CRATE_NAME_SNAKE_CASE}_bg.wasm -O2 --fast-math -o docs/${CRATE_NAME_SNAKE_CASE}_bg.wasm # add -g to get debug symbols
+wasm-opt docs/${CRATE_NAME_SNAKE_CASE}_bg.wasm -O2 -o docs/${CRATE_NAME_SNAKE_CASE}_bg.wasm # add -g to get debug symbols
 
 echo "Finished: docs/${CRATE_NAME_SNAKE_CASE}.wasm"
 
